@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter | CSS</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgb(180, 234, 180);
+            font-family: 'Poppins',sans-serif;
+        }
+        .filters{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;    
+            
+        }
+        .container{
+            margin: 50px;
+        }
+        .container img{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            float: left;
+            clip-path: circle(40%);
+            shape-outside: circle(45%);
+            object-fit: cover;
+        }
+        .filters div{
+            border: 2px solid black;
+            
+        }
+        .item{
+            text-align: center;
+            width: 200px;
+            height: 106px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .item img{
+            width: 100%;
+            height: auto; 
+        }
+        .item p{
+            text-transform: capitalize;
+        }
+        h2{
+            text-align: center;
+            margin-top:  20px;
+            text-transform: uppercase;
+            text-decoration: overline;
+        }
+        #item1 img:hover{
+            filter: blur(2px);
+            transition: 0.3s ease-in;
+        }
+        #item2 img:hover{
+            filter: brightness(1.3);
+            transition: 0.3s ease-in;
+        }
+        #item3 img:hover{
+            filter: contrast(150%);
+            transition: 0.3s ease-in;
+        }
+        #item4 img:hover{
+            filter: drop-shadow(5px 5px 5px rgb(66, 62, 62));
+            transition: 0.3s ease-in;
+        }
+        #item5 img:hover{
+            filter: grayscale(100%);
+            transition: 0.3s ease-in;
+        }
+        #item6 img:hover{
+            filter: hue-rotate(60deg);
+            transition: 0.3s ease-in;
+        }
+        #item7 img:hover{
+            filter: invert();
+            transition: 0.3s ease-in;
+        }
+        #item8 img:hover{
+            filter: opacity(0.5);
+            transition: 0.3s ease-in;
+        }
+        #item9 img:hover{
+            filter: saturate(2);
+            transition: 0.3s ease-in;
+        }
+        #item10 img:hover{
+            filter: sepia();
+            transition: 0.3s ease-in;
+        }
+        footer{
+            text-align: center;
+            margin: 10px;
+        }
+        .container p,ul,li{
+            line-height: 1.4;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h2> filter effects</h2>
+    <div class="filters">
+       
+        <div id="item1" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>blur</p></div>
+        <div id="item2" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>brightness</p></div>
+        <div id="item3" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>contrast</p></div>
+        <div id="item4" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>drop-shadow</p></div>
+        <div id="item5" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>grayscale</p></div>
+        <div id="item6" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>hue-rotate</p></div>
+        <div id="item7" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>invert</p></div>
+        <div id="item8" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>opacity</p></div>
+        <div id="item9" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>saturate</p></div>
+        <div id="item10" class="item"><img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature image"><p>sepia</p></div>
+    </div>
+    <h2>Nature</h2>
+    <div class="container">
+        <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" alt="nature">
+        <p> Nature has provided us numerous gifts such as air, water, land, sunlight, minerals, plants, and animals. All these gifts of nature make our earth a place worth living. Existence on Earth would not be possible without any of these. Now, while these natural resources are present on Earth in plenty. Unfortunately, the necessity of most of these has increased extremely over the centuries due to growth in the human population.
+            Conservation of nature means the preservation of forests, land, water bodies, and minerals, fuels, natural gases, etc. And to make sure that all these continue to be available in abundance. Thus all these natural resources make life worth living on Earth. Life would not be imaginable without air, water, sunlight as well as other natural resources present on the earth.
+
+            Thus, it is essential to conserve these resources in order to retain the environment integral. Here is a look at the types of natural resources existing on Earth and the ways to conserve these:
+            <ul> <br><b>Types of Natural Resources: </b>
+                <li> Renewable Resources: These are resources such as air, water, and sunlight that refill naturally.</li>
+                <li>Non-Renewable Resources: These are resources like fossil fuels and minerals that do not restock reform very slowly.</li>
+                <li> Biotic: These originate from living beings and organic material like plants and animals.</li>
+                <li>Abiotic: These come from non-living things and non-organic material. These comprise air, water, and land as well as metals like iron, copper, and silver.</li>
+                <li>Natural resources are also categories such as actual resources, reserve resources, stock resources and potential resources based on their development stage.</li>
+            </ul>
+        </p>
+    </div>
+    <footer><p>&copy; Created by <b>Aslam Sayyed &hearts;</b></p></footer>
+    
+</body>
+</html>
